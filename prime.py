@@ -7,7 +7,7 @@ def is_prime(number: int) -> bool | None:
         number (int): number to check
 
     Returns:
-        bool | None: None if smaller than 1, True if it is prime and 
+        bool | None: None if smaller than 1, True if it is prime and
             False otherwise.
     """
     if number <= 0:
