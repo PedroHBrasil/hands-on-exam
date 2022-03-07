@@ -7,7 +7,7 @@ def is_palindrome(word: str) -> bool | None:
         word (str): string to check
 
     Returns:
-        bool: True if it is a palindrome, false if it isn't.
+        bool: True if it is a palindrome, False if it isn't.
     """
     if len(word) <= 1:
         return True
