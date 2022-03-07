@@ -1,6 +1,7 @@
 import unittest
 from fibonacci import fibonacci
 from palindrome import is_palindrome
+from prime import is_prime
 
 
 class TestFibonacci(unittest.TestCase):
@@ -49,6 +50,42 @@ class TestPalindrome(unittest.TestCase):
 
     def test_palindrome5(self):
         self.assertFalse(is_palindrome("apedroa"), "Should be False")
+
+
+class TestPrime(unittest.TestCase):
+
+    def test_palindrome1(self):
+        self.assertIsNone(is_prime(0), "Should be False")
+
+    def test_palindrome2(self):
+        self.assertTrue(is_prime(1), "Should be True")
+
+    def test_palindrome2(self):
+        self.assertTrue(is_prime(2), "Should be True")
+
+    def test_palindrome3(self):
+        self.assertTrue(is_prime(3), "Should be True")
+
+    def test_palindrome4(self):
+        self.assertFalse(is_prime(4), "Should be False")
+
+    def test_palindrome5(self):
+        self.assertTrue(is_prime(5), "Should be True")
+
+    def test_palindrome6(self):
+        self.assertFalse(is_prime(6), "Should be False")
+
+    def test_palindrome7(self):
+        self.assertTrue(is_prime(7), "Should be True")
+
+    def test_palindrome8(self):
+        self.assertFalse(is_prime(8), "Should be False")
+
+    def test_palindrome9(self):
+        self.assertFalse(is_prime(9), "Should be False")
+ 
+    def test_palindrome10(self):
+        self.assertFalse(is_prime(10), "Should be False")
 
 
 if __name__ == '__main__':
