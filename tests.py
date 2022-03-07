@@ -2,6 +2,7 @@ import unittest
 from fibonacci import fibonacci
 from palindrome import is_palindrome
 from prime import is_prime
+from sort import sort_desc
 
 
 class TestFibonacci(unittest.TestCase):
@@ -54,38 +55,55 @@ class TestPalindrome(unittest.TestCase):
 
 class TestPrime(unittest.TestCase):
 
-    def test_palindrome1(self):
+    def test_prime1(self):
         self.assertIsNone(is_prime(0), "Should be False")
 
-    def test_palindrome2(self):
+    def test_prime2(self):
         self.assertTrue(is_prime(1), "Should be True")
 
-    def test_palindrome2(self):
+    def test_prime2(self):
         self.assertTrue(is_prime(2), "Should be True")
 
-    def test_palindrome3(self):
+    def test_prime3(self):
         self.assertTrue(is_prime(3), "Should be True")
 
-    def test_palindrome4(self):
+    def test_prime4(self):
         self.assertFalse(is_prime(4), "Should be False")
 
-    def test_palindrome5(self):
+    def test_prime5(self):
         self.assertTrue(is_prime(5), "Should be True")
 
-    def test_palindrome6(self):
+    def test_prime6(self):
         self.assertFalse(is_prime(6), "Should be False")
 
-    def test_palindrome7(self):
+    def test_prime7(self):
         self.assertTrue(is_prime(7), "Should be True")
 
-    def test_palindrome8(self):
+    def test_prime8(self):
         self.assertFalse(is_prime(8), "Should be False")
 
-    def test_palindrome9(self):
+    def test_prime9(self):
         self.assertFalse(is_prime(9), "Should be False")
- 
-    def test_palindrome10(self):
+
+    def test_prime10(self):
         self.assertFalse(is_prime(10), "Should be False")
+
+
+class TestSort(unittest.TestCase):
+
+    def test_sort1(self):
+        self.assertEqual(sort_desc([]), [], "Should be []")
+
+    def test_sort2(self):
+        self.assertEqual(sort_desc([1]), [1], "Should be [1]")
+
+    def test_sort3(self):
+        self.assertEqual(sort_desc([1, 2, 3]), [3, 2, 1],
+                         "Should be [3, 2, 1]")
+
+    def test_sort4(self):
+        self.assertEqual(sort_desc([-10, 10.5, 0]), [10.5, 0, -10],
+                         "Should be [10.5, 0, -10]")
 
 
 if __name__ == '__main__':
